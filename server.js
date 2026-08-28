@@ -974,6 +974,6 @@ async function testDatabaseConnection() {
 
 testDatabaseConnection()
 
-app.listen(PORT, () => {
-    console.log(`Server ClassHub aktif di http://localhost:${PORT}`)
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server ClassHub aktif di http://0.0.0.0:${PORT}`)
 })
