@@ -141,7 +141,10 @@
             </section>
 
             <section id="halaman-rekapan-kas" class="halaman">
-                <h2>Tabel Laporan Kas Database</h2>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; gap:8px;">
+                    <h2>Laporan Kas Database</h2>
+                    <button type="button" id="btn-export-csv" class="btn-tindakan utama" onclick="exportLaporanKasCSV()" style="font-size:0.8rem; padding:4px 8px;">Export Excel/CSV</button>
+                </div>
                 <div id="tabel-kas-wadah" class="blok-kontainer"><p>Memuat laporan kas...</p></div>
             </section>
 

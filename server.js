@@ -1,11 +1,17 @@
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
+const fs = require('fs')
 const multer = require('multer')
 const db = require('./database/db')
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
+
+const wadahFoto = path.join(__dirname, 'uploads')
+if (!fs.existsSync(wadahFoto)) {
+    fs.mkdirSync(wadahFoto, { recursive: true })
+}
 
 app.use(cors())
 app.use(express.json())
